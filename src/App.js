@@ -33,7 +33,7 @@ function App() {
       {nayoks.map(nayok => <Nayok name={nayok}></Nayok>)}
 
       {/******** dynamicly show array of object elements using component *******/}
-      {movies.map(movie => <Nayok name={movie.name}></Nayok>)}
+      {movies.map(movie => <Nayok name={movie.name} nayok={movie.nayok} naika={movie.naika}></Nayok>)}
     </div>
     // <div>
     //   {/********************* use component ***************/}
@@ -87,10 +87,13 @@ function App() {
 //   )
 // }
 
+/************** Create Another Dynamic Component **************/
 function Nayok(props) {
   return (
     <div className='paragraph'>
       <h3>{props.name}</h3>
+      <h3>{props.nayok}</h3>
+      <h3>{props.naika}</h3>
     </div>
   )
 }
